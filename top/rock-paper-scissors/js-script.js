@@ -1,51 +1,82 @@
+// https://www.theodinproject.com/lessons/foundations-rock-paper-scissors#assignment
 // Function to randomly return either 'Rock', 'Paper', or 'Scissors' for Computer.
 function getComputerChoice() {
-    let gameArray = ['rock', 'paper', 'scissors'];  
+    let gameArray = ['Rock', 'Paper', 'Scissors'];  
     return gameArray[Math.floor((Math.random() * gameArray.length))];
 }
 
 
-// Player inputs either: Rock, Paper, or Scissors
-// Use JS prompt() function and store this as a variable for use in the game().
+// Function which asks player to choose "Rock, Paper, or Scissors" with JS prompt() call.  This function also makes the answer case-insensitive, and also verifies that it is one of three acceptable answers.
+function getPlayerSelection() {
+    // array of "accepted" answers.
+    const acceptedAnswers = ["rock", "paper", "scissors"];
 
+    // Player inputs either: Rock, Paper, or Scissors and toLowerCase() makes it case-insensitive.
+    let playerSelection = prompt("Rock, Paper, or Scissors?").toLowerCase();
 
-const getPlayerSelection = prompt("Rock, Paper, or Scissors?").toLowerCase();
-
-
-// array of "accepted" answers.
-const acceptedAnswers = ["rock", "paper", "scissors"];
-
-
-// verification of player input.
-// Checking array of accepted values against the player selection.
-// NEXT:  accepted answer should make the game run.  Not accept should prompt again to make player choose the 3 choices.
-if (acceptedAnswers.includes(getPlayerSelection)) {
-    console.log("Input Works");
-} else {
-    console.log("Input Does Not Work");
+    // verification of player input.  Checking array of accepted values against the player selection.  Then makes selection's first letter capitalized.
+    if (acceptedAnswers.includes(playerSelection)) {
+        let str = playerSelection;
+        let capatalizedAnswer = str.charAt(0).toUpperCase() + str.slice(1);
+        return capatalizedAnswer;
+    } else {
+    // Accepted answer should make the game run.  Not accept should prompt again to make player choose the 3 choices.
+    return "Input misspelled";
+}
 }
 
+// Function to play a single round of the game Rock, Paper, Scissors.
 
-
-
-
-
-// How to make sure the user writes "rock", "paper", or "scissors"?
-// Use if/else if?
-// if getPlayerSelectoin == "rock", "paper", or "scissors" run playRound() Function
-// if getPlayerSelection != "rock" or "paper" or "scissors" prompt("Please select Rock, Paper, or Scissors");
-// If the user doesn't write out one of the three choices, then the prompt should change and ask the question "Please select Rock, Paper, or Scissors"
-
-
-
-
-
-// Function to play Rock, Paper, Scissors Once.
-// Function needs to have a player select Rock, Paper, or Scissors (case-insensitive)
-// Then Function needs to grab getComputerChoice()
-// Then Function needs to evaluate playerChoice vs. ComputerChoice
-// Function should return winner with string "You (Win/Lose), (Winner Selection) beats (Loser Selection)"
-
-// function playRound(playerSelection, computerSelection) {
-
+// function playRound (playerSelection, computerSelection) {
+//     if (playerSelection === "Rock" && computerSelection === "Scissors" || 
+//     playerSelection === "Paper" && computerSelection === "Rock" ||
+//     playerSelection === "Scissors" && computerSelection === "Paper") {
+//         return `You Win! ${playerSelection} beats ${computerSelection}`; 
+//     } else if (playerSelection === computerSelection) {
+//         return `You Tied! You both selected ${playerSelection}`; 
+//     } else {
+//         return `You Lose. ${computerSelection} beats ${playerSelection}`;
+//     }
 // }
+
+// let computerSelection = getComputerChoice();
+// let playerSelection = getPlayerSelection();
+// console.log(computerSelection);
+// console.log(playerSelection);
+// console.log(playRound(playerSelection, computerSelection));
+
+
+// Function to play Rock Paper Scissors 5 times.
+// Should keep score and report winner or loser at the end.
+
+// Thoughts: TOP suggests using a for loop.  Need to brush up on this.
+// Need to run the game 5 times then call it over.  Also need to display the winner overall. Hmmm.
+
+function game() {
+    for (let i = 0; i < 5, i++) {
+        if (i < 2) {
+            playRound();
+        } else {
+            return console.log("Game Over");
+        }
+
+
+        let computerSelection = getComputerChoice();
+        let playerSelection = getPlayerSelection();
+        console.log(computerSelection);
+        console.log(playerSelection);
+        console.log(playRound(playerSelection, computerSelection));
+
+        function playRound(playerSelection, computerSelection) {
+            if (playerSelection === "Rock" && computerSelection === "Scissors" || 
+            playerSelection === "Paper" && computerSelection === "Rock" ||
+            playerSelection === "Scissors" && computerSelection === "Paper") {
+                return `You Win! ${playerSelection} beats ${computerSelection}`; 
+            } else if (playerSelection === computerSelection) {
+                return `You Tied! You both selected ${playerSelection}`; 
+            } else {
+                return `You Lose. ${computerSelection} beats ${playerSelection}`;
+            }
+        }
+    }
+}
