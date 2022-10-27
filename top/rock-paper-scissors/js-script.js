@@ -12,16 +12,22 @@ function getComputerChoice() {
 
 function game() {
     for (let i = 0; i < 5; i++) {
-        let playerSelection = prompt("Rock, Paper, or Scissors?", "");
+        let playerSelection = prompt("Rock, Paper, or Scissors?", "").toLowerCase();
         let computerSelection = getComputerChoice();  
-        console.log(playRound(playerSelection, computerSelection));
-
+        playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
+        const acceptedAnswers = ["Rock", "Paper", "Scissors"];
+        if (acceptedAnswers.includes(playerSelection)) {
+            console.log(playRound(playerSelection, computerSelection));
+        } else {
+            console.log(`Input Not Accepted`);
+        } 
     }
 }
+
 // Function to play a single round of the game Rock, Paper, Scissors.
 function playRound(playerSelection, computerSelection) {
-    playerSelection = playerSelection.toLowerCase();
-    playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
+    // playerSelection = playerSelection.toLowerCase();
+    // playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
     
     if (playerSelection === "Rock" && computerSelection === "Scissors" || 
         playerSelection === "Paper" && computerSelection === "Rock" ||
