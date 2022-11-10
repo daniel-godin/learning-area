@@ -65,7 +65,6 @@ function getPlayerChoice () {
     } else {
         // For loop that loops 3 times if the original prompt is not spelled correctly.  Each loop prompts a special message to check spelling.  Each loop checks if their new answer includes one of three allowable answers.  If it does not, the loop runs again.  If it does, it returns the value.  If loop runs 3 times, it returns an undefined (i think) answer, which will make the player lose the round.
         for (let i = 0; i < 3; i++) {
-            i++;
             let playerSelection = prompt("Incompatible Answer.  Check Your Spelling.  Would you like Rock, Paper, or Scissors?", "").toLowerCase();
             playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
 
