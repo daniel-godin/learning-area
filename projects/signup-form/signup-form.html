@@ -8,6 +8,53 @@
     <link rel='stylesheet' href='./style.css' />
 </head>
 <body>
-    
+    <div class='page-container'>
+        <div class='left-background-image-container'>
+            <div class='logo-container'>
+                <img src='./images/odin-lined-sidebar-image.png' alt='Logo Name Odin' />
+                <h1>Odin</h1>
+            </div>
+        </div>
+
+        <div class='right-information-container'>
+            <div class='top-third-information-container'>
+                <h2>This is not a real online service!  You know you need something like this in your life to help you realize your deepest dreams.</h2>
+                <h2>Sign up <em>now</em> to get started.</h2>
+                <br>
+                <h2>You <em>know</em> you want to.</h2>
+            </div>
+
+            <div class='mid-third-information-container-form'>
+                <h2>Let's do this!</h2>
+                <div class='form-container'>
+                    <form id='form-signup' action='' method='post'>
+                        <label for='first-name'>First Name:</label>
+                        <input type='text' id='first-name' name='first-name' placeholder='First Name' required />
+
+                        <label for='last-name'>Last Name:</label>
+                        <input type='text' id='last-name' name='last-name' placeholder='Last Name' required />
+
+                        <label for='email'>Email:</label>
+                        <input type='email' id='email' name='email' placeholder='example@example.com' required />
+
+                        <label for='phone-number'>Phone Number:</label>
+                        <input type='number' id='phone-number' name='phone-number' pattern='' placeholder='xxx-xxx-xxxx' />
+
+                        <label for='password'>Password:</label>
+                        <input type='password' id='password' name='password' pattern='' required />
+
+                        <label for='password-confirm'>Confirm Password:</label>
+                        <input type='password' id='password-confirm' name='password-confirm' pattern='' required />
+                    </form>
+                </div>
+            </div>
+
+            <div class='bottom-third-information-container-signup'>
+                <button type='submit'>Create Account</button>
+
+                <p>Already have an account?  <a href=''>Log in</a></p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
