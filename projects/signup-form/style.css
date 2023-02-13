@@ -8,12 +8,15 @@
     overflow: hidden;
     /* Variables */
     --heading-one-color: rgba(255, 255, 255, 1);
-    
+    --input-border-color: #E5E7EB;
+    font-size: 16px;
 }
 
 body {
     width: 100vw;
-    height: 100vh;    
+    height: 100vh;   
+    margin: 0; 
+    padding: 0;
 }
 
 .page-container {
@@ -53,4 +56,27 @@ body {
 h1 {
     color: var(--heading-one-color);
     font-size: 2.5em;
+}
+
+.right-information-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: var(--input-border-color);
+}
+
+.top-third-information-container-header {
+    display: flex;
+    padding: 1rem;
+    flex-flow: column;
+    justify-content: flex-end;
+}
+
+.mid-third-information-container-form {
+    background-color: white;
+    padding: 1rem;
+}
+
+.bottom-third-information-container-signup {
+    background-color: var(--input-border-color);
+    padding: 1rem;
 }
