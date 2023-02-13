@@ -5,4 +5,52 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
+    /* Variables */
+    --heading-one-color: rgba(255, 255, 255, 1);
+    
+}
+
+body {
+    width: 100vw;
+    height: 100vh;    
+}
+
+.page-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.left-background-image-container {
+    background-image: url(./images/background-image.jpg);
+    z-index: 1;
+    /* Need to fix img size potentially */
+
+}
+
+.logo-container {
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    top: 25%;
+    height: 90px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+}
+
+.logo-sidebar-img {
+    height: 90%;
+    width: 75px;
+}
+
+h1 {
+    color: var(--heading-one-color);
+    font-size: 2.5em;
 }
