@@ -18,32 +18,48 @@
 
         <div class='right-information-container'>
             <div class='top-third-information-container-header'>
-                <p>This is not a real online service!  You know you need something like this in your life to help you realize your deepest dreams.</h2>
+                <header><p>This is not a real online service!  You know you need something like this in your life to help you realize your deepest dreams.</h2>
                 Sign up <em>now</em> to get started.</p>
                 <p>You <em>know</em> you want to.</p>
+                </header>
             </div>
 
             <div class='mid-third-information-container-form'>
-                <p>Let's do this!</p>
+                <header>
+                    <p>Let's do this!</p>
+                </header>
                 <div class='form-container'>
                     <form id='form-signup' action='' method='post'>
-                        <label for='first-name'>First Name:</label>
-                        <input type='text' id='first-name' name='first-name' placeholder='First Name' required />
 
-                        <label for='last-name'>Last Name:</label>
-                        <input type='text' id='last-name' name='last-name' placeholder='Last Name' required />
+                        <div class="input-wrapper">
+                            <label for='first-name'>First Name:</label>
+                            <input type='text' id='first-name' name='first-name' placeholder='First Name' required />
+                        </div>
 
-                        <label for='email'>Email:</label>
-                        <input type='email' id='email' name='email' placeholder='example@example.com' required />
+                        <div class="input-wrapper">
+                            <label for='last-name'>Last Name:</label>
+                            <input type='text' id='last-name' name='last-name' placeholder='Last Name' required />
+                        </div>
 
-                        <label for='phone-number'>Phone Number:</label>
-                        <input type='number' id='phone-number' name='phone-number' pattern='' placeholder='xxx-xxx-xxxx' />
+                        <div class="input-wrapper">
+                            <label for='email'>Email:</label>
+                            <input type='email' id='email' name='email' placeholder='example@example.com' required />
+                        </div>
 
-                        <label for='password'>Password:</label>
-                        <input type='password' id='password' name='password' class='error' pattern='' required />
+                        <div class="input-wrapper">
+                            <label for='phone-number'>Phone Number:</label>
+                            <input type='number' id='phone-number' name='phone-number' pattern='' placeholder='xxx-xxx-xxxx' />
+                        </div>
 
-                        <label for='password-confirm'>Confirm Password:</label>
-                        <input type='password' id='password-confirm' name='password-confirm' class='error' pattern='' required />
+                        <div class="input-wrapper">
+                            <label for='password'>Password:</label>
+                            <input type='password' id='password' name='password' class='error' pattern='' required />
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for='password-confirm'>Confirm Password:</label>
+                            <input type='password' id='password-confirm' name='password-confirm' class='error' pattern='' required />
+                        </div>
                     </form>
                 </div>
             </div>
