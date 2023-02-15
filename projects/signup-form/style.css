@@ -18,6 +18,10 @@
     
 }
 
+html {
+    min-width: 450px;
+}
+
 body {
     width: 100vw;
     height: 100vh;   
@@ -93,6 +97,15 @@ h1 {
     grid-gap: 1rem;
 }
 
+/* Changes form grid from 2 wide to 1 wide */
+@media (max-width: 800px) {
+    #form-signup {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+}
+
 .input-wrapper {
     display: flex;
     flex-flow: column nowrap;
@@ -137,6 +150,7 @@ button {
     padding: .75rem 2.5rem;
     border-radius: 5px;
     box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, .15);
+    /* outline: none; */
 }
 
 a {
