@@ -117,6 +117,14 @@ input:focus {
     background-color: white;
 }
 
+/* Error class is for inputs that do not match their pattern or validation.  Particularly password matching. */
+.error:invalid {
+    outline: none;
+    border: solid 1px red;
+    box-shadow: none;
+    background-color: white;
+}
+
 .bottom-third-information-container-signup {
     background-color: var(--input-border-color);
     padding: var(--right-containers-padding);
