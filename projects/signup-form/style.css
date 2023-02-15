@@ -13,7 +13,8 @@
     --input-border-color: rgb(229, 231, 235, .5);
     --button-color: #596D48;
     --right-containers-padding: 1.5rem;
-    --input-background-color: rgb(229, 231, 235, .10)
+    --input-background-color: rgb(229, 231, 235, .10);
+    
     
 }
 
@@ -107,6 +108,13 @@ input {
     border: solid 1px var(--input-border-color);
     border-radius: 2px;
     background-color: var(--input-background-color);
+}
+
+input:focus {
+    outline: none;
+    border: solid 1px blue;
+    box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, .25);
+    background-color: white;
 }
 
 .bottom-third-information-container-signup {
