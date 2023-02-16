@@ -164,12 +164,18 @@ button {
 }
 
 button:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
+    transition-duration: 150ms;
 }
 
 button:active {
     /* not sure how to style this yet, but this should change the button look when you click on it.  Might use  */
     /* Might use transform and/or transition to create a look of "pushing in" the button. */
+}
+
+.button-default-transition {
+    transform: scale(1.0);
+    transition-duration: 150ms;
 }
 
 a {
