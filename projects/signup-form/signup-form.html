@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DG - TOP - Fake Sign Up Form</title>
     <link rel='stylesheet' href='./style.css' />
-    <script src='./script.js'></script>
 </head>
 <body>
     <div class='page-container'>
@@ -54,12 +53,13 @@
 
                         <div class="input-wrapper">
                             <label for='password'>Password:</label>
-                            <input type='password' id='password' name='password' class='error' pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$' required />
+                            <input type='password' id='password' name='password' class='error' minlength='8' required />
+                            <!-- Possible REGEX for a good password:  pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$' -->
                         </div>
 
                         <div class="input-wrapper">
                             <label for='password-confirm'>Confirm Password:</label>
-                            <input type='password' id='password-confirm' name='password-confirm' class='error' pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$' required />
+                            <input type='password' id='password-confirm' name='password-confirm' class='error' minlength='8' required />
                         </div>
                     </form>
                 </div>
@@ -67,7 +67,18 @@
 
             <div class='bottom-third-information-container-signup'>
                 <button type='submit' onclick='passwordCheck()' form='form-signup' class='button-default-transition'>Create Account</button>
-
+                <!-- Script to check if passwords match.  Test Password:  ABcde!@#123*&3cjdl -->
+                <script>
+                    let pass1 = document.getElementById('password');
+                    let pass2 = document.getElementById('password-confirm');
+                    function passwordCheck() {
+                        if (pass1.value === pass2.value) {
+                            return true;
+                        } else {
+                            alert('Passwords do not match!');
+                        }
+                    }
+                </script>
                 <p>Already have an account?  <a href=''>Log in</a></p>
             </div>
         </div>
