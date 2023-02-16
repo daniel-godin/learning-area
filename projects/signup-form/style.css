@@ -130,6 +130,16 @@ input:focus {
     background-color: white;
 }
 
+input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type=number] {
+        -moz-appearance: textfield;
+        /* Firefox */
+      }
+
 /* Error class is for inputs that do not match their pattern or validation.  Particularly password matching. */
 .error:invalid {
     outline: none;
